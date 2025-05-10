@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Franz Ignacio</title>
+  <title>Franz Gregor Ignacio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,29 +11,29 @@
     <h1>Franz Ignacio</h1>
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><button class="tablink active" onclick="openTab(event, 'about')">About</button></li>
+        <li><button class="tablink" onclick="openTab(event, 'projects')">Projects</button></li>
+        <li><button class="tablink" onclick="openTab(event, 'contact')">Contact</button></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="about">
+    <section id="about" class="tab-content active">
       <h2>About Me</h2>
       <p>I'm a student passionate about web and game design and development.</p>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="tab-content">
       <h2>Projects</h2>
       <ul>
         <li><strong>Project One:</strong> A web app that helps users track their tasks.</li>
         <li><strong>Project Two:</strong> A website for TravlrGetaways that handles booking for vacations.</li>
-        <li><strong>Project Three:</strong> A portfolio website showcasing my designs. (You're current on this one!)</li>
+        <li><strong>Project Three:</strong> A portfolio website showcasing my designs. (You're currently on this one!)</li>
       </ul>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="tab-content">
       <h2>Contact</h2>
       <p>Personal Email: ignaciofranz9@gmail.com</p>
       <p>Business Email: kiriseentertainment@gmail.com</p>
@@ -43,5 +43,23 @@
   <footer>
     <p>&copy; 2025 Franz Ignacio</p>
   </footer>
+
+  <script>
+    function openTab(evt, tabId) {
+      const tabContents = document.getElementsByClassName("tab-content");
+      const tabLinks = document.getElementsByClassName("tablink");
+
+      for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove("active");
+      }
+
+      for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove("active");
+      }
+
+      document.getElementById(tabId).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
 </body>
 </html>
