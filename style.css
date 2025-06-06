@@ -77,6 +77,8 @@ footer {
 
 #education {
   padding: 2rem 1rem;
+  background-color: #ffffff;
+  color: #111;
 }
 
 #education h3 {
@@ -84,6 +86,7 @@ footer {
   border-bottom: 2px solid #ccc;
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
+  color: #222;
 }
 
 .education-grid {
@@ -99,6 +102,11 @@ footer {
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-4px);
 }
 
 .edu-logo {
@@ -108,8 +116,31 @@ footer {
   display: block;
 }
 
-@media screen and (max-width: 768px) {
+.education-item h4 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+}
 
+.education-item p {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.education-item ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+
+.education-item li {
+  margin-bottom: 0.4rem;
+  font-size: 0.92rem;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
   header,
   footer {
     text-align: center;
@@ -158,12 +189,12 @@ footer {
     align-self: center;
   }
 
-  #about>div {
+  #about > div {
     flex-direction: column;
     align-items: center;
   }
 
-  education-grid {
+  .education-grid {
     flex-direction: column;
   }
 
@@ -174,6 +205,4 @@ footer {
   .edu-logo {
     margin: 0 auto 1rem;
   }
-
-
 }
