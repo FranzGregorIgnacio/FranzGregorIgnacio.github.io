@@ -55,7 +55,8 @@ nav ul li {
   display: block;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -75,7 +76,9 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  header, footer {
+
+  header,
+  footer {
     text-align: center;
     padding: 1rem;
   }
@@ -122,8 +125,45 @@ footer {
     align-self: center;
   }
 
-  #about > div {
+  #about>div {
     flex-direction: column;
     align-items: center;
   }
+
+  #education {
+    padding: 2rem 1rem;
+  }
+
+  .education-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .education-item {
+    flex: 1 1 45%;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .edu-logo {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .education-grid {
+      flex-direction: column;
+    }
+
+    .education-item {
+      flex: 1 1 100%;
+    }
+  }
+
 }
