@@ -13,8 +13,8 @@
     <h1>Franz Gregor Ignacio</h1>
     <nav>
       <ul>
-        <li><button type="button" class="tablink active" onclick="openTab(event, 'about')">About</button></li>
-        <li><button type="button" class="tablink" onclick="openTab(event, 'projects')">Projects</button></li>
+        <li><button type="button" class="tablink" onclick="openTab(event, 'about')">About</button></li>
+        <li><button type="button" class="tablink active" onclick="openTab(event, 'projects')">Projects</button></li>
         <li><button type="button" class="tablink" onclick="openTab(event, 'resume')">Resume</button></li>
         <li><button type="button" class="tablink" onclick="openTab(event, 'contact')">Contact</button></li>
       </ul>
@@ -64,7 +64,7 @@
       <h2>Projects</h2>
       <ul>
         <li>
-          <strong>Python Game Artifact:</strong>
+          <strong>Python Game Artifact (Enhancement 3):</strong>
           <a href="https://github.com/FranzGregorIgnacio/PythonGameArtifact" target="_blank">
             View on GitHub
           </a>
@@ -72,7 +72,7 @@
             algorithms and data structures on top of database integration.</p>
         </li>
         <li>
-          <strong>Computer Graphics Project:</strong>
+          <strong>Computer Graphics Project (Enhancement 1 and 2):</strong>
           <a href="https://github.com/FranzGregorIgnacio/ComputerGraphicsProject" target="_blank">
             View on GitHub
           </a>
@@ -152,11 +152,6 @@
           </p>
         </div>
       </div>
-
-
-
-
-
 
       <section id="education">
         <h3>Education</h3>
@@ -238,8 +233,8 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-      openTab(null, 'about');
-      const aboutButton = document.querySelector(".tablink[onclick*='about']");
+      openTab(null, 'projects');
+      const aboutButton = document.querySelector(".tablink[onclick*='projects']");
       if (aboutButton) {
         aboutButton.classList.add("active");
       }
