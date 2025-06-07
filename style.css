@@ -199,6 +199,24 @@ nav ul li {
   object-fit: cover;
 }
 
+.logo-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.exp-logo {
+  max-height: 40px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
+.exp-logo.tall-logo {
+  max-height: 50px;
+}
+
 @media screen and (max-width: 768px) {
   header,
   footer {
