@@ -35,8 +35,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===== NAVIGATION BAR ===== */
-
 header {
   background-color: #2c2c2c;
   padding: 1rem 0;
@@ -79,14 +77,6 @@ nav ul {
 main {
   flex: 1 0 auto;
   padding: 2rem 1rem;
-}
-
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
 }
 
 #about {
