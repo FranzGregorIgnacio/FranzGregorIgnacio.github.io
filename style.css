@@ -1,79 +1,37 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
-  color: #333;
+  background-color: #fdfdfd;
+  color: #111;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
+h1, h2, h3 {
+  font-weight: 600;
+  color: #222;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+section {
+  padding: 2rem 1rem;
 }
 
-nav ul li {
-  display: inline;
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.tablink {
-  background-color: #444;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+ul li {
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
-.tablink:hover {
-  background-color: #555;
+ul li img {
+  max-height: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
-.tablink.active {
-  background-color: #007BFF;
-}
-
-.tab-content {
-  display: none;
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-html,
-body {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1 0 auto;
-}
-
-footer {
-  flex-shrink: 0;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 0;
-}
 
 #education {
   padding: 2rem 1rem;
@@ -140,60 +98,7 @@ footer {
   color: #333;
 }
 
-@media screen and (max-width: 768px) {
-  header,
-  footer {
-    text-align: center;
-    padding: 1rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .tablink {
-    width: 100%;
-    max-width: 250px;
-    font-size: 0.95rem;
-    padding: 10px 0;
-    border-radius: 6px;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.1s ease-in-out;
-  }
-
-  .tablink:active {
-    transform: scale(0.98);
-  }
-
-  .tab-content {
-    padding: 1rem;
-    font-size: 0.95rem;
-  }
-
-  .tab-content img {
-    width: 100%;
-    height: auto;
-    margin-top: 1rem;
-  }
-
-  #resume ul {
-    padding-left: 1rem;
-  }
-
-  #about img {
-    width: 120px;
-    height: 120px;
-    margin-top: 1rem;
-    align-self: center;
-  }
-
-  #about > div {
-    flex-direction: column;
-    align-items: center;
-  }
-
+@media (max-width: 768px) {
   .education-grid {
     flex-direction: column;
   }
@@ -203,6 +108,85 @@ footer {
   }
 
   .edu-logo {
+    margin: 0 auto 1rem;
+  }
+}
+
+#experience {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  color: #111;
+}
+
+#experience h3 {
+  font-size: 1.75rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.experience-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.experience-item {
+  flex: 1 1 45%;
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-4px);
+}
+
+.exp-logo {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.experience-item h4 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+}
+
+.experience-item p {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.experience-item ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+
+.experience-item li {
+  margin-bottom: 0.4rem;
+  font-size: 0.92rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .experience-grid {
+    flex-direction: column;
+  }
+
+  .experience-item {
+    flex: 1 1 100%;
+  }
+
+  .exp-logo {
     margin: 0 auto 1rem;
   }
 }
