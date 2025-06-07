@@ -6,6 +6,26 @@ body {
   color: #333;
 }
 
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0;
+}
+
 header {
   background-color: #333;
   color: #fff;
@@ -47,32 +67,12 @@ nav ul li {
 .tab-content {
   display: none;
   padding: 2rem;
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
 }
 
 .tab-content.active {
   display: block;
-}
-
-html,
-body {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1 0 auto;
-}
-
-footer {
-  flex-shrink: 0;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 0;
 }
 
 #education {
@@ -140,7 +140,67 @@ footer {
   color: #333;
 }
 
+.experience-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.experience-item {
+  flex: 1 1 45%;
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-4px);
+}
+
+.exp-logo {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.experience-item h4 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+}
+
+.experience-item p {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.experience-item ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+
+.experience-item li {
+  margin-bottom: 0.4rem;
+  font-size: 0.92rem;
+  color: #333;
+}
+
+#about img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 768px) {
+
   header,
   footer {
     text-align: center;
@@ -178,10 +238,6 @@ footer {
     margin-top: 1rem;
   }
 
-  #resume ul {
-    padding-left: 1rem;
-  }
-
   #about img {
     width: 120px;
     height: 120px;
@@ -189,20 +245,23 @@ footer {
     align-self: center;
   }
 
-  #about > div {
+  #about>div {
     flex-direction: column;
     align-items: center;
   }
 
-  .education-grid {
+  .education-grid,
+  .experience-grid {
     flex-direction: column;
   }
 
-  .education-item {
+  .education-item,
+  .experience-item {
     flex: 1 1 100%;
   }
 
-  .edu-logo {
+  .edu-logo,
+  .exp-logo {
     margin: 0 auto 1rem;
   }
 }
