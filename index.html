@@ -208,7 +208,7 @@
   </footer>
 
   <script>
-    function openTab(evt, tabId) {
+    function openTab(evt, tabName) {
       const tabContents = document.getElementsByClassName("tab-content");
       const tabLinks = document.getElementsByClassName("tablink");
 
@@ -220,10 +220,16 @@
         tabLinks[i].classList.remove("active");
       }
 
-      document.getElementById(tabId).classList.add("active");
+      document.getElementById(tabName).classList.add("active");
       evt.currentTarget.classList.add("active");
     }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const defaultTab = document.querySelector(".tablink");
+      if (defaultTab) defaultTab.click();
+    });
   </script>
+
 </body>
 
 </html>
