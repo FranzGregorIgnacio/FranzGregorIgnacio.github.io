@@ -75,7 +75,7 @@ nav ul {
     }
 
     .tablink.active {
-        background-color: #007BFF;
+        background-color: #007bff;
     }
 
 .intro {
@@ -86,33 +86,42 @@ nav ul {
     margin-bottom: 2rem;
 }
 
-    .intro > div {
-        align-items: center !important;
-        justify-content: space-between;
-    }
+.intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
 
-    .intro p {
+.intro-text {
+    flex: 1;
+}
+
+    .intro-text p {
         margin: 0 0 1rem;
         line-height: 1.7;
         font-size: 1rem;
     }
 
-        .intro p:last-child {
+        .intro-text p:last-child {
             margin-bottom: 0;
         }
 
-    .intro img {
-        flex-shrink: 0;
-        border: 4px solid #e5e7eb;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-    }
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 4px solid #e5e7eb;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
 
 .tab-content {
     display: none;
-    padding: 2rem;
-    max-width: 100%;
-    margin: 0 auto;
     width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
     background-color: #fff;
     border-radius: 18px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
@@ -306,7 +315,7 @@ nav ul {
     }
 
 a {
-    color: #007BFF;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -354,17 +363,17 @@ a {
         border-radius: 14px;
     }
 
-        .intro > div {
-            flex-direction: column-reverse;
-            align-items: center !important;
-            text-align: center;
-        }
+    .intro-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
 
-        .intro img {
-            width: 130px !important;
-            height: 130px !important;
-            margin-bottom: 0.5rem;
-        }
+    .profile-pic {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 0.5rem;
+    }
 
     .education-grid,
     .experience-grid {
