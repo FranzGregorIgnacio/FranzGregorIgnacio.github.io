@@ -88,7 +88,7 @@ nav ul {
 
 .intro-content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 2rem;
 }
@@ -186,6 +186,78 @@ nav ul {
     margin: 0.75rem 0;
     font-size: 1rem;
 }
+
+.contact-intro {
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .form-group label {
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #1f2937;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font: inherit;
+        padding: 0.85rem 1rem;
+        border: 1px solid #d1d5db;
+        border-radius: 10px;
+        background-color: #fff;
+        color: #111827;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 180px;
+    }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.12);
+        }
+
+.submit-btn {
+    align-self: flex-start;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.9rem 1.4rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+    .submit-btn:hover {
+        background-color: #0069d9;
+        transform: translateY(-1px);
+    }
 
 #education {
     padding: 2rem 0 0;
@@ -372,7 +444,16 @@ a {
     .profile-pic {
         width: 130px;
         height: 130px;
-        margin-bottom: 0.5rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .submit-btn {
+        width: 100%;
+        align-self: stretch;
     }
 
     .education-grid,
